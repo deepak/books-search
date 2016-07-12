@@ -1,0 +1,23 @@
+{
+  "name": "books-search",
+  "description": "Search for a book on the Internets",
+  "version": "0.0.1",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "author": "Deepak Kannan <deepak@codemancers.com> (http://www.deepak-kannan.com)",
+  "keywords": [
+    "api",
+    "books"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepak/books-search.git"
+  },
+  "bugs": {
+    "url": "https://github.com/deepak/books-search/issues"
+  },
+  "homepage": "https://github.com/deepak/books-search"
+}
