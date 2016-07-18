@@ -9,6 +9,10 @@
   },
   "license": "ISC",
   "author": "Deepak Kannan <deepak@codemancers.com> (http://www.deepak-kannan.com)",
+  "engines": {
+    "node": ">= 4.4.7",
+    "npm": ">= 3.10.3"
+  },
   "keywords": [
     "api",
     "books"
