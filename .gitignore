@@ -4,6 +4,9 @@
 # Dependency directories
 node_modules
 
+# Webpack output
+build
+
 # Apple OSX finder
 *.DS_Store
 
