@@ -1,4 +1,5 @@
 const path = require('path'),
+      HtmlWebpackPlugin = require('html-webpack-plugin'),
       PATHS = {
         app: path.join(__dirname, 'app'),
         build: path.join(__dirname, 'build')
@@ -24,5 +25,12 @@ module.exports = {
         loader: 'babel-loader'
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Books Search',
+      inject: true,
+      template: path.join(PATHS.app, 'index.html')
+    })
+  ]
 };
