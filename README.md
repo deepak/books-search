@@ -8,5 +8,5 @@ Search for books on:
 
 ```sh
 $ npm install
-$ npm run build
+$ npm start
 ```

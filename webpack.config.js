@@ -1,4 +1,5 @@
 const path = require('path'),
+      webpack = require('webpack'),
       HtmlWebpackPlugin = require('html-webpack-plugin'),
       PATHS = {
         app: path.join(__dirname, 'app'),
@@ -17,6 +18,21 @@ module.exports = {
     filename: '[name].js'
   },
   devtool: 'source-map',
+  devServer: {
+    contentBase: PATHS.build,
+    // Enable history API fallback
+    // so HTML5 History API based routing works
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    progress: true,
+    // Display only errors to reduce the amount of output.
+    stats: 'errors-only',
+    // 0.0.0.0 is available to all network devices
+    // unlike default localhost
+    host: process.env.HOST || '0.0.0.0',
+    port: process.env.PORT || '8080'
+  },
   module: {
     loaders: [
       {
@@ -31,6 +47,7 @@ module.exports = {
       title: 'Books Search',
       inject: true,
       template: path.join(PATHS.app, 'index.html')
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ]
 };
